@@ -1,7 +1,7 @@
 # Личный проект «Readme»
 
 * Студент: [Irina](https://up.htmlacademy.ru/php/12/user/1215481).
-* Наставник: `Никита Колосов`.
+* Наставник: [Никита Колосов](https://htmlacademy.ru/profile/id1186205).
 
 ---
 
