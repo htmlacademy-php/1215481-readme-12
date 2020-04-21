@@ -46,24 +46,22 @@ $posts = [
     ],
 ];
 
-function crop_text(string $text, int $max_length = 300): string
+function crop_text(string $text, int $max_length): string
 {
     $text_length = mb_strlen($text);
     $cropped_text_length = mb_strrpos($text, ' ', $max_length - $text_length);
     return mb_substr($text, 0, $cropped_text_length);
 }
 
-function prepare_post_text(string $text): string
+function prepare_post_text(string $text, int $max_length = 300): string
 {
-    $max_length = 260;
     $text_length = mb_strlen($text);
     if ($text_length > $max_length) {
-        $result = '<p>' . crop_text($text, $max_length) . '...</p>' .
+        return '<p>' . crop_text($text, $max_length) . '...</p>' .
             '<a class="post-text__more-link" href="#">Читать далее</a>';
     } else {
-        $result = '<p>' . $text . '</p>';
+        return '<p>' . $text . '</p>';
     }
-    return $result;
 }
 
 ?>
